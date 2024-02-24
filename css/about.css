@@ -1,0 +1,35 @@
+body {
+  overflow-y: visible;
+  border-bottom: 0;
+}
+
+.full {
+  height: 100vh;
+}
+
+.inline-illust-text {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
+}
+.inline-illust-text p {
+  width: 40%;
+}
+.inline-illust-text.vertical {
+  flex-direction: column-reverse;
+}
+.inline-illust-text.reverse {
+  flex-direction: row-reverse;
+}
+.inline-illust-text img {
+  width: 40%;
+}
+
+.about {
+  padding: 5px;
+}
+.about .langs {
+  margin-left: auto;
+  margin-right: 3px;
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,291 @@
+// /* CSS HEX */
+// --folly: #f3535bff;
+// --ghost-white: #ededf4ff;
+// --licorice: #110b11ff;
+// --maize: #e7e247ff;
+
+// /* CSS HSL */
+// --folly: hsla(357, 87%, 64%, 1);
+// --ghost-white: hsla(240, 24%, 94%, 1);
+// --licorice: hsla(300, 21%, 5%, 1);
+// --maize: hsla(58, 77%, 59%, 1);
+
+/* SCSS HEX */
+$folly: #f3535bff;
+$ghost-white: #ededf4ff;
+$licorice: #110b11ff;
+$maize: #e7e247ff;
+
+/* SCSS HSL */
+$folly: hsla(357, 87%, 64%, 1);
+$ghost-white: hsla(240, 24%, 94%, 1);
+$licorice: hsla(300, 21%, 5%, 1);
+$maize: hsla(58, 77%, 59%, 1);
+
+/* SCSS RGB */
+$folly: rgba(243, 83, 91, 1);
+$ghost-white: rgba(237, 237, 244, 1);
+$licorice: rgba(17, 11, 17, 1);
+$maize: rgba(231, 226, 71, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+  0deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #f3535bff,
+  #ededf4ff,
+  #110b11ff,
+  #e7e247ff
+);
+$gradient-radial: radial-gradient(#f3535bff, #ededf4ff, #110b11ff, #e7e247ff);
+
+@font-face {
+  font-family: BroaekOutline;
+  src: url(../fonts/BroaekOutline.ttf);
+}
+
+@font-face {
+  font-family: BroaekRegular;
+  src: url(../fonts/BroaekRegular.ttf);
+}
+
+@font-face {
+  font-family: KostanRegular;
+  src: url(../fonts/Kostan\ Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+.header-heading {
+  margin-left: 50px;
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+p,
+label,
+a {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+* {
+  color: $ghost-white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "BroaekRegular", sans-serif;
+}
+
+a {
+  transition: opacity 0.1s;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: calc(100% - 4px);
+  margin: 0;
+  background-size: cover;
+  background-color: $licorice;
+  border: 2px solid $ghost-white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.song-spotlight {
+  h2 {
+    margin-inline: auto;
+    text-decoration-line: underline;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  iframe {
+    margin-inline: auto;
+  }
+}
+
+button {
+  background-color: $folly;
+  border: 1px solid $ghost-white;
+  box-shadow: black 1px 1px 4px;
+}
+
+button.clicked {
+  box-shadow: inset black 1px 1px 4px;
+}
+
+.limit {
+  height: 2px;
+  border-bottom: 2px solid $ghost-white;
+  margin-inline: 40px;
+  margin-top: 50px;
+}
+
+.box {
+  width: 500px;
+  height: 250px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+
+  &.abs {
+    position: absolute;
+    &.right {
+      right: 20px;
+    }
+
+    &.left {
+      left: 20px;
+    }
+  }
+
+  &.right {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  &.left {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+
+  &.middle {
+    transform: translateX(100%);
+  }
+
+  &.folly {
+    background-color: $folly;
+
+    &.border {
+      border: 2px solid $ghost-white;
+    }
+  }
+
+  &.maize {
+    background-color: $maize;
+  }
+
+  p {
+    color: $licorice;
+    text-indent: 10px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+  }
+
+  &.ghost {
+    background-color: $ghost-white;
+  }
+}
+
+nav {
+  padding: 10px;
+  background-color: $folly;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 a {
+    font-family: "BroaekRegular";
+    font-size: 2.2rem;
+    border-bottom: 0;
+  }
+
+  a {
+    text-decoration-line: none;
+    font-size: 1.3rem;
+
+    border-bottom: 2px solid $ghost-white;
+  }
+}
+.fullbody-background {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  opacity: 0.3;
+  z-index: -1;
+
+  img {
+    transform: scaleX(-1);
+    width: 140%;
+  }
+}
+.refsheet {
+  width: 100%;
+  display: block;
+  margin-block: auto;
+}
+
+.decoration {
+  display: inline-block;
+  height: 20px;
+  width: 200px;
+  background: repeating-linear-gradient(
+    45deg,
+    black,
+    black 5px,
+    transparent 5px,
+    transparent 10px
+  );
+}
